@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.nav-bar {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.nav-bar-item {
+    padding-top: 8px;
+}
+
+// ion-content {
+//     background-color: blue !important;
+//     background-image: 'assets/mobile_backgrounds/astronaut_mowing.jpeg';
+// }
+
+// inner-scroll {
+//     background-color: pink !important;
+// }
+
+// .inner-scroll {
+//     background: pink !important;
+// }
+
+ion-content {
+    --background: url('assets/mobile_backgrounds/astronaut_mowing.jpeg') no-repeat center center / cover;
+}
