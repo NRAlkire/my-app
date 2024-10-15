@@ -6,3 +6,84 @@
 body {
     background-image: './assets/mobile_backgrounds/astronaut_mowing.jpeg';
 }
+
+.app-loading {
+  background: #0B2851;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  transition: left 0.5s;
+}
+
+.app-loading .logo {
+  width:fit-content;
+  height: fit-content;
+}
+
+.app-loading .spinner .path {
+  width: 50%;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  animation: dash 2s ease-in infinite;
+  stroke-linecap: round;
+  stroke: #ddd;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+.landing-text {
+  font-size: larger;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+    display: flex !important;
+}
+
+ion-button {
+    --background: #fff;
+    --background-hover: rgba(255, 255, 255, .5);
+    --background-activated: #fff;
+    --background-focused: #fff;
+    color: black;
+}
+
+mat-error {
+    color: white;
+}
+
+::ng-deep .mdc-text-field {
+    background-color: white;
+    align-items: center !important;
+    height: 40px !important;
+    border-radius: 8px !important;
+}
+
+.choose-your-adventure {
+  height: 50px;
+}

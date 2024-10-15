@@ -1,0 +1,31 @@
+/**
+ * Ionic Dark Theme
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+$primary-color: #000000;
+$primary-light: rgba(0, 0, 0, .5);
+$secondary-color: #728639;
+$secondary-light: rgba(114, 143, 57, .5);
+$tertiary-color: #ffffff;
+$tertiary-light: rgba(255, 255, 255, 0.5);
+$success-color: #006912;
+$success-light: rgba(0, 105, 18, .5);
+$warn-color: #ff0000;
+$warn-light: rgba(255, 0, 0, 0.5);
+
+.login-icons {
+    color: black;
+    padding-right: 16px;
+    align-self: center;
+}
+
+ion-card {
+    background-color: black;
+}

@@ -28,24 +28,33 @@
 <ion-content>
     <ion-card>
         <div>
-            <ion-toggle disabled="notificationsUnderConstruction">
-                Push Notifications
-            </ion-toggle>
-        </div>
-        <div>
-            <ion-button>
-                About
-            </ion-button>
-        </div>
-        <div>
-            <ion-button (click)="openFeedback()">
-                Feedback
-            </ion-button>
-        </div>
-        <div>
-            <ion-button>
-                Logout
-            </ion-button>
+            <ion-item>
+                <ion-toggle disabled="notificationsUnderConstruction">
+                    Push Notifications
+                </ion-toggle>
+            </ion-item>
+            <ion-item>
+                <i class="fa-solid fa-circle-info"></i>
+                <span>About
+                    <i class="fa-solid fa-angle-right"></i>
+                </span>
+            </ion-item>
+            <ion-item>
+                <i class="fa-solid fa-circle-info"></i>
+                <span (click)="openFeedback()">Feedback
+                    <i class="fa-solid fa-angle-right"></i>
+                </span>
+            </ion-item>
+            <ion-item>
+                <span id="logout" (click)="logout()">Logout
+                    <i class="fa-solid fa-door-open"></i>
+                </span>
+                <ion-toast
+                trigger="logout"
+                message="You have been successfully logged out."
+                [duration]="3000"
+                position="middle"></ion-toast>
+            </ion-item>
         </div>
     </ion-card>
 </ion-content>

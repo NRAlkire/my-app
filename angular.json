@@ -31,6 +31,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss",
               {
                 "input": "node_modules/@ionic/angular/css/core.css"
@@ -63,7 +64,7 @@
                 "input": "node_modules/@ionic/angular/css/flex-utils.css"
               },
               {
-                "input": "src/theme/variables.css"
+                "input": "src/theme/variables.scss"
               }
             ],
             "scripts": []

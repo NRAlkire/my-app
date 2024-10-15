@@ -11,7 +11,6 @@ import { IonButton, IonContent } from "@ionic/angular/standalone";
 export class HomeComponent {
 checkLogs() {
   console.log('Testing');
-throw new Error('Method not implemented.');
 }
 
 }

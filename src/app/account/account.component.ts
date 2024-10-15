@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { IonButton, IonContent, IonCard, IonToggle, IonModal, IonApp, IonHeader, IonToolbar, IonButtons, IonTitle } from "@ionic/angular/standalone";import { FeedbackComponent } from '../shared/components/feedback/feedback.component';
-;
+import { AppComponent } from '../app.component';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [IonTitle, IonButtons, IonToolbar, IonHeader, IonApp, IonModal, IonToggle, IonCard, IonContent, IonButton, FeedbackComponent],
+  imports: [IonicModule],
   templateUrl: './account.component.html',
   styleUrl: './account.component.scss'
 })
@@ -14,7 +14,9 @@ export class AccountComponent implements OnInit {
 notificationsUnderConstruction: boolean;
 feedbackModal: boolean;
 
-constructor() {
+constructor(
+  private app: AppComponent
+) {
 
 }
 
@@ -32,6 +34,10 @@ console.log("open Feedback");
 
 closeFeedback() {
   this.feedbackModal = false;
+}
+
+logout() {
+  this.app.authorized = false;
 }
 
 }
