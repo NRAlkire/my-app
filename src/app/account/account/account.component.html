@@ -1,0 +1,64 @@
+<!--What can I add into an Account Tab?-->
+
+
+
+<!--What should I add into this Account Tab?-->
+
+<ion-modal [isOpen]="feedbackModal">
+  <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="closeFeedback()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni illum quidem recusandae ducimus quos
+          reprehenderit. Veniam, molestias quos, dolorum consequuntur nisi deserunt omnis id illo sit cum qui. Eaque,
+          dicta.
+        </p>
+      </ion-content>
+    </ng-template>
+</ion-modal>
+
+
+<ion-content>
+<ion-card>
+  <div>
+      <ion-item>
+          <ion-toggle disabled="notificationsUnderConstruction">
+              Push Notifications
+          </ion-toggle>
+      </ion-item>
+      <ion-item>
+          <i class="fa-solid fa-circle-info"></i>
+          <span>About
+              <i class="fa-solid fa-angle-right"></i>
+          </span>
+      </ion-item>
+      <ion-item>
+          <i class="fa-solid fa-circle-info"></i>
+          <span (click)="openFeedback()">Feedback
+              <i class="fa-solid fa-angle-right"></i>
+          </span>
+      </ion-item>
+      <ion-item>
+          <span id="logout" (click)="logout()">Logout
+              <i class="fa-solid fa-door-open"></i>
+          </span>
+          <ion-toast
+          trigger="logout"
+          message="You have been successfully logged out."
+          [duration]="3000"
+          position="middle"></ion-toast>
+      </ion-item>
+  </div>
+</ion-card>
+</ion-content>
+
+<i class="fa-solid fa-user"></i>
+
+<span class="fa-solid fa-user"></span>

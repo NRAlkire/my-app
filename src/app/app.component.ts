@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatError, MatFormField } from '@angular/material/form-field';
 import { RouterOutlet, Router } from '@angular/router';
-import { NavigationComponent } from "./navigation/navigation.component";
 import { IonFooter,
   IonContent,
   IonHeader,
@@ -35,7 +34,6 @@ import { NgbCarouselConfig, NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap
     IonContent,
     IonFooter,
     RouterOutlet,
-    NavigationComponent,
     CommonModule,
     MatFormField,
     ReactiveFormsModule,
@@ -63,6 +61,8 @@ export class AppComponent implements OnInit {
 
   authorized: boolean;
   validInput: boolean;
+
+  role: string;
 
   windowWidth: string;
   showSplash = true;
@@ -109,9 +109,16 @@ export class AppComponent implements OnInit {
     }
 }
 
-  login() {
+  storytellerLogin() {
     this.authorized = true;
-    this.router.navigateByUrl('/home');
+    this.role = 'Storyteller';
+    this.router.navigateByUrl('/storytellerHome');
+  }
+
+  playerLogin() {
+    this.authorized = true;
+    this.role = 'Player';
+    this.router.navigateByUrl('/playerHome');
   }
 
   get email() {

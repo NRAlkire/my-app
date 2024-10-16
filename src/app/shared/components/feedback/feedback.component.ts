@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountComponent } from '../../../account/account.component';
+import { AccountComponent } from '../../account/account.component';
 import { IonContent } from "@ionic/angular/standalone";
 
 @Component({
